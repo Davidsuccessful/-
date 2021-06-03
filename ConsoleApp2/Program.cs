@@ -47,7 +47,30 @@ namespace ConsoleApp2
         }
         static void Prime()
         {
-           // int 
+            int MaxF = 1000;
+            int N = 7;
+            if (N % 3 == 0)
+            {
+                Console.WriteLine("Шукай далі");
+                return;
+            }
+
+            int[] a = new int[MaxF];
+            for (int i = 2; i < MaxF; i++)
+                if (a[i] == 0)
+                {
+                    if (i > N && (i - N) % 3 == 0)
+                    {
+                        // Найшли
+                        Console.WriteLine(i);
+                        break;
+                    }
+                    for (int j = i + i; j < MaxF; j += i)
+                        a[j] = 1;
+                }
         }
     }
 }
+
+
+ 
