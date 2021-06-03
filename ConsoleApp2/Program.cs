@@ -35,11 +35,19 @@ namespace ConsoleApp2
 
         static void Fibonacci()
         {
-
+            int a, b, c = 1;
+            fibonacci_nums.Add(b = 0);
+            do
+            {
+                fibonacci_nums.Add(c);
+                a = b;
+                b = c;
+                c = a + b;
+            } while (c > 0);
         }
         static void Prime()
         {
-
+           // int 
         }
     }
 }
